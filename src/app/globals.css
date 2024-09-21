@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tile-a span {
+    background: #fff;
+    border-radius: 14px;
+    padding: 5px;
+    color: blue;
+    font-size: 14px;
+    font-weight: 400;
+}
+.beds-card-1 {
+    border-bottom: 2px solid gray;
+    margin: 0 20px;
+}
+.map-btn{
+    background-color: rgb(67, 94, 248);
+    padding: 6px;
+    border: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+h2.heding-sec {
+    background: black;
+    color: #fff;
+    padding: 4px;
+    padding-left: 4px;
+    margin-top: 10px;
+}
+span.stile {
+    color: blue;
+    font-size: 18px;
+    font-weight: 500;
+}
+.coloree{
+    color: green;
+}
+.colore{
+    color: #fff;
+}
+.seccc-3 {
+    margin: 12px;
+    margin-left: 0;
+}
+.part-2-boking > h2 {
+    text-align: center;
+    background: blue;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 5px;
+    font-weight: 600;
+}
+.part-2-bokingg > h2 {
+    text-align: center;
+    background: orangered;
+    color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    padding: 5px;
+    font-weight: 600;
+}
