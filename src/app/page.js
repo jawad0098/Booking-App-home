@@ -47,7 +47,35 @@ const cardData = [
     rooms: 3,
     location: "Austin TX",
   },
+  {
+    imgSrc: Card3,
+    price: "$3,200/mo",
+    title: "Boston Commons Retreat",
+    beds: 4,
+    baths: 2,
+    rooms: 3,
+    location: "Austin TX",
+  },
+  {
+    imgSrc: Card3,
+    price: "$2,200/mo",
+    title: "Boston Commons Retreat",
+    beds: 4,
+    baths: 2,
+    rooms: 3,
+    location: "Austin TX",
+  },
+  {
+    imgSrc: Card3,
+    price: "$4,20/mo",
+    title: "Boston Commons Retreat",
+    beds: 4,
+    baths: 2,
+    rooms: 3,
+    location: "Austin TX",
+  },
 ];
+
 
 
 const Card = ({ imgSrc, price, title, beds, baths, rooms, location }) => (
@@ -76,6 +104,14 @@ const Card = ({ imgSrc, price, title, beds, baths, rooms, location }) => (
       <div className="pl-0">
         <SvgIcon component={BathtubIcon} />
         <span className="p-0">{baths} Baths</span>
+      </div>
+      <div className="pl-0">
+        <SvgIcon component={MeetingRoomIcon} />
+        <span className="p-0">{rooms} Rooms</span>
+      </div>
+      <div className="pl-0">
+        <SvgIcon component={MeetingRoomIcon} />
+        <span className="p-0">{rooms} Rooms</span>
       </div>
       <div className="pl-0">
         <SvgIcon component={MeetingRoomIcon} />
