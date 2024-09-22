@@ -16,6 +16,9 @@ import { SvgIcon } from '@mui/material';
 import Card1 from '../../public/card-1.webp';
 import Card2 from '../../public/card-2.jpg';
 import Card3 from '../../public/card-3.jpg';
+import Card4 from '../../public/card-4.jpg';
+import Card5 from '../../public/card-5.jpg';
+import Card6 from '../../public/card-6.jpg';
 
 
 
@@ -48,7 +51,7 @@ const cardData = [
     location: "Austin TX",
   },
   {
-    imgSrc: Card3,
+    imgSrc: Card4,
     price: "$3,200/mo",
     title: "Boston Commons Retreat",
     beds: 4,
@@ -57,7 +60,7 @@ const cardData = [
     location: "Austin TX",
   },
   {
-    imgSrc: Card3,
+    imgSrc: Card5,
     price: "$2,200/mo",
     title: "Boston Commons Retreat",
     beds: 4,
@@ -66,7 +69,7 @@ const cardData = [
     location: "Austin TX",
   },
   {
-    imgSrc: Card3,
+    imgSrc: Card6,
     price: "$4,20/mo",
     title: "Boston Commons Retreat",
     beds: 4,
