@@ -1,164 +1,118 @@
+// React and Next.js imports
 import React from 'react';
 import Image from 'next/image';
-import BedIcon from '@mui/icons-material/Bed'; // Make sure this package is installed
+
+// Material UI Icons
+import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import ShareIcon from '@mui/icons-material/Share';
 import TurnedInIcon from '@mui/icons-material/TurnedIn';
 import DoneIcon from '@mui/icons-material/Done';
 import ClearIcon from '@mui/icons-material/Clear';
+import { SvgIcon } from '@mui/material'; 
+
+// Image imports
 import Card1 from '../../public/card-1.webp';
 import Card2 from '../../public/card-2.jpg';
 import Card3 from '../../public/card-3.jpg';
-import { SvgIcon } from '@mui/material'; // Import SvgIcon to handle icons correctly
+
+
+
+const cardData = [
+  {
+    imgSrc: Card1,
+    price: "$4,200/mo",
+    title: "Boston Commons Retreat",
+    beds: 3,
+    baths: 3,
+    rooms: 3,
+    location: "Austin TX",
+  },
+  {
+    imgSrc: Card2,
+    price: "$4,200/mo",
+    title: "Boston Commons Retreat",
+    beds: 3,
+    baths: 2,
+    rooms: 2,
+    location: "Austin TX",
+  },
+  {
+    imgSrc: Card3,
+    price: "$4,200/mo",
+    title: "Boston Commons Retreat",
+    beds: 4,
+    baths: 2,
+    rooms: 3,
+    location: "Austin TX",
+  },
+];
+
+
+const Card = ({ imgSrc, price, title, beds, baths, rooms, location }) => (
+  <div className="main-card shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-2xl">
+    <div className="card-1 relative rounded-t-2xl">
+      <Image
+        src={imgSrc}
+        alt={title}
+        width={500}
+        height={500}
+        style={{ width: '100%', height: 'auto' }}
+      />
+      <div className="tile-a absolute top-4 right-4">
+        <span>{price}</span>
+      </div>
+    </div>
+    <div className="card-title pl-4 pt-4 pb-4">
+      <p>Apartment</p>
+      <h2 className="font-medium">{title}</h2>
+    </div>
+    <div className="beds-card-1 flex items-center pl-5 pr-5 pb-4 justify-center flex-wrap gap-5">
+      <div className="pl-0">
+        <SvgIcon component={BedIcon} />
+        <span className="p-0">{beds} Beds</span>
+      </div>
+      <div className="pl-0">
+        <SvgIcon component={BathtubIcon} />
+        <span className="p-0">{baths} Baths</span>
+      </div>
+      <div className="pl-0">
+        <SvgIcon component={MeetingRoomIcon} />
+        <span className="p-0">{rooms} Rooms</span>
+      </div>
+    </div>
+    <div className="sec-map flex items-center justify-between p-4">
+      <div className="map">
+        <span>{location}</span>
+      </div>
+      <div className="map-dev">
+        <span className="map-btn">Detail</span>
+      </div>
+    </div>
+  </div>
+);
+
 
 const Page = () => {
   return (
     <>
-      <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-5 my-3.5'>
-        <div className="main-card shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-2xl">
-          <div className='card-1 relative rounded-t-2xl'>
-            <Image
-              src={Card1}
-              alt="Card 1"
-              width={500}
-              height={500}
-            />
-            <div className="tile-a absolute top-4 right-4">
-              <span>$4,200/mo</span>
-            </div>
-          </div>
-          <div className="card-title pl-4 pt-4 pb-4">
-            <p>Apartment</p>
-            <h2 className='font-medium'>Boston Commons Retreat</h2>
-          </div>
-          <div className="beds-card-1 flex items-center pl-5 pr-5 pb-4 justify-center flex-wrap gap-5">
-            <div className='pl-0'>
-              <SvgIcon component={BedIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={BathtubIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-          </div>
-          <div className="sec-map flex items-center justify-between	p-4">
-            <div className="map">
-              <span>Austlin TX</span>
-            </div>
-            <div className="map-dev">
-              <span className='map-btn'>Detail</span>
-            </div>
-          </div>
-        </div>
-        <div className="main-card shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-2xl">
-          <div className='card-1 relative rounded-t-2xl'>
-            <Image
-              src={Card2}
-              alt="Card 1"
-              width={500}
-              height={500}
-            />
-            <div className="tile-a absolute top-4 right-4">
-              <span>$4,200/mo</span>
-            </div>
-          </div>
-          <div className="card-title pl-4 pt-4 pb-4">
-            <p>Apartment</p>
-            <h2 className='font-medium'>Boston Commons Retreat</h2>
-          </div>
-          <div className="beds-card-1 flex items-center pl-5 pr-5 pb-4 justify-center flex-wrap gap-5">
-            <div className='pl-0'>
-              <SvgIcon component={BedIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={BathtubIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-          </div>
-          <div className="sec-map flex items-center justify-between	p-4">
-            <div className="map">
-              <span>Austlin TX</span>
-            </div>
-            <div className="map-dev">
-              <span className='map-btn'>Detail</span>
-            </div>
-          </div>
-        </div>
-        <div className="main-card shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-2xl">
-          <div className='card-1 relative rounded-t-2xl'>
-            <Image
-              src={Card3}
-              alt="Card 1"
-              width={500}
-              height={500}
-            />
-            <div className="tile-a absolute top-4 right-4">
-              <span>$4,200/mo</span>
-            </div>
-          </div>
-          <div className="card-title pl-4 pt-4 pb-4">
-            <p>Apartment</p>
-            <h2 className='font-medium'>Boston Commons Retreat</h2>
-          </div>
-          <div className="beds-card-1 flex items-center pl-5 pr-5 pb-4 justify-center flex-wrap gap-5">
-            <div className='pl-0'>
-              <SvgIcon component={BedIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={BathtubIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-            <div className='pl-0'>
-              <SvgIcon component={MeetingRoomIcon} /> { }
-              <span className="p-0">3 Beds</span>
-            </div>
-          </div>
-          <div className="sec-map flex items-center justify-between	p-4">
-            <div className="map">
-              <span>Austlin TX</span>
-            </div>
-            <div className="map-dev">
-              <span className='map-btn'>Detail</span>
-            </div>
-          </div>
-        </div>
+     
+     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 my-3.5">
+    {cardData.map((card, index) => (
+      <Card
+        key={index}
+        imgSrc={card.imgSrc}
+        price={card.price}
+        title={card.title}
+        beds={card.beds}
+        baths={card.baths}
+        rooms={card.rooms}
+        location={card.location}
+      />
+    ))}
+  </div>
 
-      </div>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
         <div className='col-span-2'>
           <div className="sec-2 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] p-5 mt-6 mb-6">
